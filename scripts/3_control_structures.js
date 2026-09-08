@@ -110,62 +110,116 @@
           // - Usaually used for counter variable increment/decrement on counter variable update
 
 // printing 1 - 5
-for (let i = 1; i <= 5; i++){
-    console.log(i);
-}
+// for (let i = 1; i <= 5; i++){
+//     console.log(i);
+// }
 
-for (let i = 1; i <= 5;){
-  console.log(i++);
-}
+// for (let i = 1; i <= 5;){
+//   console.log(i++);
+// }
 
-for (let i = 1 ; ;) {
-  console.log(i++);
+// for (let i = 1 ; ;) {
+//   console.log(i++);
   
-  if (i > 5){
-    break;
+//   if (i > 5){
+//     break;
+//   }
+
+// }
+
+// // *
+// // * *
+// // * * *
+// // * * * *
+// // * * * * *
+// for (let i = 1; i <= 5; i++){
+//   let row = ""; 
+//   for (let j = 1; j <= i; j++){
+//     row += "* ";
+//   }
+//   console.log(row);
+// }
+
+// for (let i = 1; i <= 5; i++){
+//   console.log("* ".repeat(i));
+// }
+
+// //            *
+// //          * *
+// //        * * *
+// //      * * * *
+// //    * * * * *
+// for (let i = 1; i <= 5; i++){
+//    console.log('  '.repeat(5 - i) + `* `.repeat(i));
+// }
+// //     *
+// //    * *
+// //   * * *
+// //  * * * *
+// // * * * * *
+// //  * * * *
+// //   * * *
+// //    * *
+// //     *
+// for (let row = 1; row < 10; row++){
+//   if (row <= 5){
+//     console.log(" ".repeat(5-row) + "* ".repeat(row));
+//   } else {
+//     console.log("  ".repeat(row - 5) + "* ".repeat(10 - row));
+//   }
+// }
+
+// const students = [
+//   'shimna',
+//   'puru',
+//   'jaya',
+//   'ragul',
+// ]
+// students.push('sreeja');
+
+
+// // print all students with serial numbers along side.
+
+// for (let i = 0; i < students.length; i++){
+//   console.log(`${i + 1}. ${students[i]}`);
+// }
+
+// for (let student of students){
+//   console.log(student);
+// }
+
+// for (let [student_index, student] of students.entries()){
+//   console.log(`${student_index + 1}. ${student}`);
+// }
+
+// for (let student_index in students){
+//   console.log(`${parseInt(student_index) + 1} ~ ${students[student_index]}`);
+// }
+
+// while loop
+
+    // while (truth_value){
+    //     // code block
+    // }
+ 
+  // print 1 to 10
+  let i = 1;
+  while (i <= 10){
+    console.log(i++);
   }
 
-}
+  let students = [
+    'nanna',
+    'amma',
+  ]
 
-// *
-// * *
-// * * *
-// * * * *
-// * * * * *
-for (let i = 1; i <= 5; i++){
-  let row = ""; 
-  for (let j = 1; j <= i; j++){
-    row += "* ";
+  while(students.length != 0){
+    console.log(students.pop());
   }
-  console.log(row);
-}
 
-for (let i = 1; i <= 5; i++){
-  console.log("* ".repeat(i));
-}
-
-//            *
-//          * *
-//        * * *
-//      * * * *
-//    * * * * *
-for (let i = 1; i <= 5; i++){
-   console.log('  '.repeat(5 - i) + `* `.repeat(i));
-}
-//     *
-//    * *
-//   * * *
-//  * * * *
-// * * * * *
-//  * * * *
-//   * * *
-//    * *
-//     *
-for (let row = 1; row < 10; row++){
-  if (row <= 5){
-    console.log(" ".repeat(5-row) + "* ".repeat(row));
-  } else {
-    console.log("  ".repeat(row - 5) + "* ".repeat(10 - row));
-  }
-}
+  // do while loop
+    // do {
+    //     // code block
+    // } 
+    // while (truth_value);
 
