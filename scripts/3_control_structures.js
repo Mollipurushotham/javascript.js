@@ -17,7 +17,7 @@
 
 //     //v11. if .... else
 //         let userAuthenticated = true;
-       
+
 //       if (userAuthenticated) {
 //         console.log("welcome to your profile");
 //       } else {
@@ -88,7 +88,7 @@
 //                 break;
 //             case 3: 
 //                 console.log(`please go to nearset store`);
-                
+
 //             case 0:
 //                 console.log("thank you for visibilitiy us. \nBye");
 //                 break;
@@ -103,11 +103,11 @@
 //     // code block
 // }
 // expr1 :> Executes once before first iteration
-         // - Usaually used for counter variable initialization
+// - Usaually used for counter variable initialization
 // expr2 :> Evaluated before started of each iteration
-          // - Usaually used for checking termination condition
+// - Usaually used for checking termination condition
 // expr3 :> Executes after each iteration
-          // - Usaually used for counter variable increment/decrement on counter variable update
+// - Usaually used for counter variable increment/decrement on counter variable update
 
 // printing 1 - 5
 // for (let i = 1; i <= 5; i++){
@@ -120,7 +120,7 @@
 
 // for (let i = 1 ; ;) {
 //   console.log(i++);
-  
+
 //   if (i > 5){
 //     break;
 //   }
@@ -198,28 +198,108 @@
 
 // while loop
 
-    // while (truth_value){
-    //     // code block
-    // }
- 
-  // print 1 to 10
-  let i = 1;
-  while (i <= 10){
-    console.log(i++);
+// while (truth_value){
+//     // code block
+// }
+
+// print 1 to 10
+// let i = 1;
+// while (i <= 10){
+//   console.log(i++);
+// }
+
+// let students = [
+//   'nanna',
+//   'amma',
+// ]
+
+// while(students.length != 0){
+//   console.log(students.pop());
+// }
+
+// do while loop
+// do {
+//     // code block
+// } 
+// while (truth_value);
+
+// let's find the factorial of 5
+
+// let [fact, n] =[1, 5];
+// console.log(typeof n); 
+
+// while (n > 1){
+//   fact *= n--;
+// }
+// console.log(typeof n);
+// console.log(fact);
+
+
+// let a1 = [1,2,3];
+// let a2 = [4,5,6];
+
+// let c =[...a1, ...a2];
+// console.log(c);
+// let [a, b, ...rest] = c;
+// console.log(rest);
+//
+
+//fibonacci series
+// 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ,,,
+
+// fib(n) = fib(n-1) + fib(n-2);
+
+// let n = 5;
+// let [first, second] = [0, 1];
+// let result;
+// for(let count = 0; count < 5; count++){
+//   //console.log(first);
+//   result = first;
+//   let next = first + second;
+
+//    next = first + second;
+//   first = second;
+//   second = next;
+
+// }
+// console.log(result);
+
+// class student {
+//   #password;
+//   study() {
+//     console.log("this");
+//   }
+//   learn() {
+//     console.log("that");
+//   }
+// }
+
+
+// 3. Exception Handling : Execution of risky code block expecting exceptions
+
+function withdrawMoney(blance, amount) {
+
+  try {
+    // Risky code block
+    if (amount <= 0) {
+       throw new Error("Amount must be greater than zero.");
+    }
+    if (amount > blance) {
+      throw new Error("Insufficient balance.");
+    }
+    blance -= amount;
+    console.log(`your withdrawal of Rs. ${amount} was sucessful.
+      Blance is Rs. ${blance}`);
   }
-
-  let students = [
-    'nanna',
-    'amma',
-  ]
-
-  while(students.length != 0){
-    console.log(students.pop());
+  catch (err) {
+    // error handling
+    console.log(`Transaction failed!
+       ${err}`);
   }
-
-  // do while loop
-    // do {
-    //     // code block
-    // } 
-    // while (truth_value);
+  finally {
+    // clean-up
+    console.log("Thank you !!")
+  }
+}
+withdrawMoney(blance = 2000, amount = 3000);
 
